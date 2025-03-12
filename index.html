@@ -20,6 +20,7 @@
 
     <!-- Início Header -->
     <header class="w-full h-[420px] bg-zinc-900 bg-hover bg-center">
+        <span class="text-white absolute text-sm p-3">Uma aplicação: <a target="_blank" href="https://www.danyeldev.com/">danyeldev.com</a></span>
         <div class="w-full h-full flex flex-col justify-center items-center">
             <img src="./assets/logo.jpg" alt="logo estabelecimento"
                 class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200" />
@@ -65,7 +66,7 @@
                         <div>
                             <span>Qtd</span>
                             <button class="bg-gray-900 px-4 py-1 rounded remove-to-cart-btn" data-name="Esp. Carne"
-                                data-price="8">
+                            data-price="8">
                                 <i class="fa fa-circle-minus text-lg text-white"></i>
                             </button>
                             <span class="px-2">0</span>
@@ -289,7 +290,7 @@
 
     <!-- Início Modal Cart -->
     <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
-        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
+        <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px] cart-items-container">
             <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
 
             <div id="cart-items" class="flex justify-between mb-2 flex-col">

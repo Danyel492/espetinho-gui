@@ -20,3 +20,13 @@ header {
 button {
     cursor: pointer;
 }
+
+.cart-items-container {
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+a {
+    text-decoration: underline;
+    padding: 10px;
+}

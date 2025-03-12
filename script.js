@@ -1,6 +1,7 @@
 const menu = document.getElementById('menu')
 const cartBtn = document.getElementById('cart-btn')
 const cartModal = document.getElementById('cart-modal')
+const cartItemsContainerAnimation = document.querySelector('.cart-items-container')
 const cartItemsContainer = document.getElementById('cart-items')
 const cartTotal = document.getElementById('cart-total')
 const checkoutBtn = document.getElementById('checkout-btn')
@@ -16,6 +17,11 @@ let cart = []
 cartBtn.addEventListener("click", () => {
     updateCartModal()
     cartModal.style.display = "flex"
+    //Adiciona animação de rolagem no modal
+    cartItemsContainerAnimation.scrollTo({
+        top: cartItemsContainerAnimation.scrollHeight,
+        behavior: 'smooth'
+    });
 })
 
 // Fechar o modal quando clicar fora ou no botão "Fechar"
@@ -94,6 +100,12 @@ document.addEventListener('DOMContentLoaded', () => {
         button.addEventListener('mouseup', () => {
             button.style.backgroundColor = '';
         });
+        button.addEventListener('touchstart', () => {
+            button.style.backgroundColor = 'green';
+        });
+        button.addEventListener('touchend', () => {
+            button.style.backgroundColor = '';
+        });
     });
 
     removeFromCartButtons.forEach(button => {
@@ -101,6 +113,12 @@ document.addEventListener('DOMContentLoaded', () => {
             button.style.backgroundColor = 'red';
         });
         button.addEventListener('mouseup', () => {
+            button.style.backgroundColor = '';
+        });
+        button.addEventListener('touchstart', () => {
+            button.style.backgroundColor = 'red';
+        });
+        button.addEventListener('touchend', () => {
             button.style.backgroundColor = '';
         });
     });
@@ -120,7 +138,7 @@ function updateCartModal() {
             <div>
                 <p class="font-medium">${item.name}</p>
                 <p>Qtd: ${item.quantity}</p>
-                <p class="font-medium mt-2">R$${item.price.toFixed(2)}</p>
+                <p class="font-medium mt-2">R$${(item.price*item.quantity).toFixed(2)}</p>
             </div>
             <button class="remove-from-cart-btn" data-name="${item.name}">
                 Remover
@@ -186,21 +204,21 @@ addressInput.addEventListener("input", (event) => {
 
 //Finalizar pedido
 checkoutBtn.addEventListener("click", () => {
-    const isOpen = checkRestaurantOpen()
-    if (!isOpen) {
-        Toastify({
-            text: "Ops! O restaurante está fechado =(",
-            duration: 3000,
-            close: true,
-            gravity: "top", // `top` or `bottom`
-            position: "center", // `left`, `center` or `right`
-            stopOnFocus: false, // Prevents dismissing of toast on hover
-            style: {
-                background: "#ef4444",
-            }
-        }).showToast()
-        return
-    }
+    // const isOpen = checkRestaurantOpen()
+    // if (!isOpen) {
+    //     Toastify({
+    //         text: "Ops! O restaurante está fechado =(",
+    //         duration: 3000,
+    //         close: true,
+    //         gravity: "top", // `top` or `bottom`
+    //         position: "center", // `left`, `center` or `right`
+    //         stopOnFocus: false, // Prevents dismissing of toast on hover
+    //         style: {
+    //             background: "#ef4444",
+    //         }
+    //     }).showToast()
+    //     return
+    // }
 
     if (cart.length === 0) return;
     if (addressInput.value === "") {
@@ -213,18 +231,37 @@ checkoutBtn.addEventListener("click", () => {
     const cartItems = cart.map((item) => {
         return (
             `
-            -${item.name} (${item.quantity})
+            ${item.name} (${item.quantity})
             Preço: R$${item.price}
-            ________________
-            `
+            ________________` 
         )
-    }).join(" ")
+    }).join("")
 
-    const saldation = encodeURIComponent("Espetinho do Gui") //Mudar aqui para o nome do estabelecimento desejado
-    const message = encodeURIComponent(cartItems)
+    const saldation1 = encodeURIComponent(
+        `*Espetinho do Gui*`
+    )
+    const saldation2 = encodeURIComponent(
+        `_Pedido feito pelo cardápio online_
+        *Itens:*`
+    )
+    const messageItems = encodeURIComponent(cartItems)
+    let total = 0
+    cart.forEach(item => {
+        total += item.price * item.quantity
+    cartTotal.textContent = total.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    })
+    })
+    cartTotal.textContent = total.toLocaleString("pt-BR", {
+        style: "currency",
+        currency: "BRL"
+    })
+    const messageTotal = encodeURIComponent(`*TOTAL: ${cartTotal.textContent}*`)
+    const messageName = encodeURIComponent(`Nome: ${addressInput.value}`)
     const phone = "18981280390" // Mudar aqui para o número do whatsapp do estabelecimento, com DDD
 
-    window.open(`https://wa.me/${phone}?text=${saldation}%0A${message}%0ANome: ${addressInput.value}`, "_blank")
+    window.open(`https://wa.me/${phone}?text=${saldation1}%0A${saldation2}%0A${messageItems}%0A${messageTotal}%0A%0A${messageName}`, "_blank")
 
     cart = []
     addressInput.value = ""
@@ -235,7 +272,7 @@ checkoutBtn.addEventListener("click", () => {
 function checkRestaurantOpen() {
     const data = new Date()
     const hora = data.getHours()
-    return hora >= 18 && hora < 22 //true = restaurante aberto
+    return hora >= 19 && hora < 1 //true = restaurante aberto
 }
 
 const isOpen = checkRestaurantOpen()
