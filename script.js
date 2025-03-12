@@ -220,11 +220,11 @@ checkoutBtn.addEventListener("click", () => {
         )
     }).join(" ")
 
-    const saldation = encodeURIComponent("Pedido: Bartô Lanches")
+    const saldation = encodeURIComponent("Espetinho do Gui") //Mudar aqui para o nome do estabelecimento desejado
     const message = encodeURIComponent(cartItems)
-    const phone = "18981771798"
+    const phone = "18981280390" // Mudar aqui para o número do whatsapp do estabelecimento, com DDD
 
-    window.open(`https://wa.me/${phone}?text=${saldation}%0A${message}%0AEndereço: ${addressInput.value}`, "_blank")
+    window.open(`https://wa.me/${phone}?text=${saldation}%0A${message}%0ANome: ${addressInput.value}`, "_blank")
 
     cart = []
     addressInput.value = ""
