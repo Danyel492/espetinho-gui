@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+:root {
+    --claro: #f6f7f8;
+}
+
+body {
+    background-color: var(--claro);
+}
+
+body, button, input, textarea {
+    font-family: "SUSE", sans-serif;
+}
+
+header {
+    background-image: url("./../assets/bg.jpg");
+}
+
+button {
+    cursor: pointer;
+}
