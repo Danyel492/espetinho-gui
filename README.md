@@ -19,7 +19,7 @@ Este é um projeto de interface gráfica para um cardápio de espetinhos e bebid
 - JavaScript
 
 ## Estrutura do Projeto
-
+```
 espetinho-gui/
 ├── assets/
 │ ├── bg.jpg
@@ -34,7 +34,7 @@ espetinho-gui/
 ├── package.json
 ├── README.md
 └── script.js
-
+```
 ## Como Executar o Projeto
 
 1. Clone o repositório para o seu ambiente local:
