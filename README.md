@@ -73,6 +73,7 @@ Ao clicar no botão de finalizar pedido, o sistema verifica se o restaurante est
 Para mudar o numero do Whatsapp, navegue no arquivo `script.js` até:
 
     ```bash
+    
     //Enviar o pedido para a api whatsapp
     const cartItems = cart.map((item) => {
         return (
@@ -87,6 +88,7 @@ Para mudar o numero do Whatsapp, navegue no arquivo `script.js` até:
     const saldation = encodeURIComponent("Espetinho do Gui") //Mudar aqui para o nome do estabelecimento desejado
     const message = encodeURIComponent(cartItems)
     const phone = "mude para o numero do whatsapp" // Mudar aqui para o número do whatsapp do estabelecimento, com DDD
+
     ```
 
 ## Contribuição
