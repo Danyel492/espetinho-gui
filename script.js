@@ -232,7 +232,7 @@ checkoutBtn.addEventListener("click", () => {
         return (
             `
             ${item.name} (${item.quantity})
-            Preço: R$${item.price}
+            Preço: R$${item.price*item.quantity}
             ________________` 
         )
     }).join("")

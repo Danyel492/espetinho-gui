@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="./assets/logo.jpg" />
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
 
@@ -20,7 +21,8 @@
 
     <!-- Início Header -->
     <header class="w-full h-[420px] bg-zinc-900 bg-hover bg-center">
-        <span class="text-white absolute text-sm p-3">Uma aplicação: <a target="_blank" href="https://www.danyeldev.com/">danyeldev.com</a></span>
+        <span class="text-white absolute text-sm p-3">Uma aplicação: <a target="_blank"
+                href="https://www.danyeldev.com/">danyeldev.com</a></span>
         <div class="w-full h-full flex flex-col justify-center items-center">
             <img src="./assets/logo.jpg" alt="logo estabelecimento"
                 class="w-32 h-32 rounded-full shadow-lg hover:scale-110 duration-200" />
@@ -36,113 +38,117 @@
         </div>
     </header>
     <!-- Final Header -->
+    <div id="container">
 
-    <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
-        Conheça nosso menu
-    </h2>
-
-
-    <!-- Início Menu -->
-    <!-- Início Grid Espetinhos -->
-    <div class="mx-auto max-w-7xl px-2 my-2">
-        <h2 class="font-bold text-3xl">
-            Espetinhos
+        <h2 class="text-2xl md:text-3xl font-bold text-center mt-9 mb-6">
+            Conheça nosso menu
         </h2>
-    </div>
-    <div id="menu">
-        <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
-            <!-- Início Produto Item -->
-            <div class="flex gap-2">
-                <!-- <img src="./assets/hamb-1.png" alt="hamburgues smash" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" /> -->
-                <div>
-                    <p class="font-bold">Carne</p>
-                    <p class="text-sm">Suculentos cubos de carne bovina, cuidadosamente selecionados e temperados com
-                        especiarias especiais da casa.</p>
 
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <div>
-                            <p class="font-bold text-lg">R$8,00<span class="text-sm"> cada</span></p>
-                        </div>
-                        <div>
-                            <span>Qtd</span>
-                            <button class="bg-gray-900 px-4 py-1 rounded remove-to-cart-btn" data-name="Esp. Carne"
-                            data-price="8">
-                                <i class="fa fa-circle-minus text-lg text-white"></i>
-                            </button>
-                            <span class="px-2">0</span>
-                            <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn" data-name="Esp. Carne"
-                                data-price="8">
-                                <i class="fa fa-circle-plus text-lg text-white"></i>
-                            </button>
+
+        <!-- Início Menu -->
+        <!-- Início Grid Espetinhos -->
+        <div class="mx-auto max-w-7xl px-2 my-2">
+            <h2 class="font-bold text-3xl">
+                Espetinhos
+            </h2>
+        </div>
+        <div id="menu">
+            <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16">
+                <!-- Início Produto Item -->
+                <div class="flex gap-2">
+                    <!-- <img src="./assets/hamb-1.png" alt="hamburgues smash" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" /> -->
+                    <div>
+                        <p class="font-bold">Carne</p>
+                        <p class="text-sm">Suculentos cubos de carne bovina, cuidadosamente selecionados e temperados
+                            com
+                            especiarias especiais da casa.</p>
+
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <div>
+                                <p class="font-bold text-lg">R$8,00<span class="text-sm"> cada</span></p>
+                            </div>
+                            <div>
+                                <span>Qtd</span>
+                                <button class="bg-gray-900 px-4 py-1 rounded remove-to-cart-btn" data-name="Esp. Carne"
+                                    data-price="8">
+                                    <i class="fa fa-circle-minus text-lg text-white"></i>
+                                </button>
+                                <span class="px-2">0</span>
+                                <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn" data-name="Esp. Carne"
+                                    data-price="8">
+                                    <i class="fa fa-circle-plus text-lg text-white"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Final Produto Item -->
-            <!-- Início Produto Item -->
-            <div class="flex gap-2">
-                <!-- <img src="./assets/hamb-1.png" alt="hamburgues smash" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" /> -->
-                <div>
-                    <p class="font-bold">Frango</p>
-                    <p class="text-sm">Deliciosos cubos de frango macios e suculentos, temperados com uma combinação
-                        especial de ervas e especiarias.</p>
+                <!-- Final Produto Item -->
+                <!-- Início Produto Item -->
+                <div class="flex gap-2">
+                    <!-- <img src="./assets/hamb-1.png" alt="hamburgues smash" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" /> -->
+                    <div>
+                        <p class="font-bold">Frango</p>
+                        <p class="text-sm">Deliciosos cubos de frango macios e suculentos, temperados com uma combinação
+                            especial de ervas e especiarias.</p>
 
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <div>
-                            <p class="font-bold text-lg">R$8,00<span class="text-sm"> cada</span></p>
-                        </div>
-                        <div>
-                            <span>Qtd</span>
-                            <button class="bg-gray-900 px-4 py-1 rounded remove-to-cart-btn" data-name="Esp. Frango"
-                                data-price="8">
-                                <i class="fa fa-circle-minus text-lg text-white"></i>
-                            </button>
-                            <span class="px-2">0</span>
-                            <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn" data-name="Esp. Frango"
-                                data-price="8">
-                                <i class="fa fa-circle-plus text-lg text-white"></i>
-                            </button>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <div>
+                                <p class="font-bold text-lg">R$8,00<span class="text-sm"> cada</span></p>
+                            </div>
+                            <div>
+                                <span>Qtd</span>
+                                <button class="bg-gray-900 px-4 py-1 rounded remove-to-cart-btn" data-name="Esp. Frango"
+                                    data-price="8">
+                                    <i class="fa fa-circle-minus text-lg text-white"></i>
+                                </button>
+                                <span class="px-2">0</span>
+                                <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn" data-name="Esp. Frango"
+                                    data-price="8">
+                                    <i class="fa fa-circle-plus text-lg text-white"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Final Produto Item -->
-            <!-- Início Produto Item -->
-            <div class="flex gap-2">
-                <!-- <img src="./assets/hamb-1.png" alt="hamburgues smash" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" /> -->
-                <div>
-                    <p class="font-bold">Panceta</p>
-                    <p class="text-sm">Deliciosos cubos de panceta suína, selecionados e temperados com uma combinação
-                        especial de especiarias que realçam o sabor único da carne.</p>
+                <!-- Final Produto Item -->
+                <!-- Início Produto Item -->
+                <div class="flex gap-2">
+                    <!-- <img src="./assets/hamb-1.png" alt="hamburgues smash" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" /> -->
+                    <div>
+                        <p class="font-bold">Panceta</p>
+                        <p class="text-sm">Deliciosos cubos de panceta suína, selecionados e temperados com uma
+                            combinação
+                            especial de especiarias que realçam o sabor único da carne.</p>
 
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <div>
-                            <p class="font-bold text-lg">R$8,00<span class="text-sm"> cada</span></p>
-                        </div>
-                        <div>
-                            <span>Qtd</span>
-                            <button class="bg-gray-900 px-4 py-1 rounded remove-to-cart-btn" data-name="Esp. Panceta"
-                                data-price="8">
-                                <i class="fa fa-circle-minus text-lg text-white"></i>
-                            </button>
-                            <span class="px-2">0</span>
-                            <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn" data-name="Esp. Panceta"
-                                data-price="8">
-                                <i class="fa fa-circle-plus text-lg text-white"></i>
-                            </button>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <div>
+                                <p class="font-bold text-lg">R$8,00<span class="text-sm"> cada</span></p>
+                            </div>
+                            <div>
+                                <span>Qtd</span>
+                                <button class="bg-gray-900 px-4 py-1 rounded remove-to-cart-btn"
+                                    data-name="Esp. Panceta" data-price="8">
+                                    <i class="fa fa-circle-minus text-lg text-white"></i>
+                                </button>
+                                <span class="px-2">0</span>
+                                <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn" data-name="Esp. Panceta"
+                                    data-price="8">
+                                    <i class="fa fa-circle-plus text-lg text-white"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Final Produto Item -->
-            <!-- Início Produto Item -->
-            <div class="flex gap-2">
-                <!-- <img src="./assets/hamb-1.png" alt="hamburgues smash" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" /> -->
-                <div>
-                    <p class="font-bold">Kafta</p>
-                    <p class="text-sm">Uma deliciosa combinação de carne moída selecionada, temperada com especiarias
-                        árabes autênticas, como hortelã, pimenta síria e especiarias exclusivas da casa, criando um
-                        sabor único e irresistível.</p>
+                <!-- Final Produto Item -->
+                <!-- Início Produto Item -->
+                <div class="flex gap-2">
+                    <!-- <img src="./assets/hamb-1.png" alt="hamburgues smash" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" /> -->
+                    <div>
+                        <p class="font-bold">Kafta</p>
+                        <p class="text-sm">Uma deliciosa combinação de carne moída selecionada, temperada com
+                            especiarias
+                            árabes autênticas, como hortelã, pimenta síria e especiarias exclusivas da casa, criando um
+                            sabor único e irresistível.</p>
 
                         <div class="flex items-center gap-2 justify-between mt-3">
                             <div>
@@ -161,16 +167,16 @@
                                 </button>
                             </div>
                         </div>
+                    </div>
                 </div>
-            </div>
-            <!-- Final Produto Item -->
-            <!-- Início Produto Item -->
-            <div class="flex gap-2">
-                <!-- <img src="./assets/hamb-1.png" alt="hamburgues smash" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" /> -->
-                <div>
-                    <p class="font-bold">Queijo Coalho</p>
-                    <p class="text-sm">Deliciosos cubos de queijo coalho, com sua textura firme e sabor suavemente
-                        salgado.</p>
+                <!-- Final Produto Item -->
+                <!-- Início Produto Item -->
+                <div class="flex gap-2">
+                    <!-- <img src="./assets/hamb-1.png" alt="hamburgues smash" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" /> -->
+                    <div>
+                        <p class="font-bold">Queijo Coalho</p>
+                        <p class="text-sm">Deliciosos cubos de queijo coalho, com sua textura firme e sabor suavemente
+                            salgado.</p>
 
                         <div class="flex items-center gap-2 justify-between mt-3">
                             <div>
@@ -178,27 +184,27 @@
                             </div>
                             <div>
                                 <span>Qtd</span>
-                                <button class="bg-gray-900 px-4 py-1 rounded remove-to-cart-btn" data-name="Esp. Queijo Coalho"
-                                    data-price="8">
+                                <button class="bg-gray-900 px-4 py-1 rounded remove-to-cart-btn"
+                                    data-name="Esp. Queijo Coalho" data-price="8">
                                     <i class="fa fa-circle-minus text-lg text-white"></i>
                                 </button>
                                 <span class="px-2">0</span>
-                                <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn" data-name="Esp. Queijo Coalho"
-                                    data-price="8">
+                                <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn"
+                                    data-name="Esp. Queijo Coalho" data-price="8">
                                     <i class="fa fa-circle-plus text-lg text-white"></i>
                                 </button>
                             </div>
                         </div>
+                    </div>
                 </div>
-            </div>
-            <!-- Final Produto Item -->
-            <!-- Início Produto Item -->
-            <div class="flex gap-2">
-                <!-- <img src="./assets/hamb-1.png" alt="hamburgues smash" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" /> -->
-                <div>
-                    <p class="font-bold">Queijo c/ Chocolate</p>
-                    <p class="text-sm">Deliciosos cubos de queijo coalho, com sua textura firme e sabor suavemente
-                        salgado.</p>
+                <!-- Final Produto Item -->
+                <!-- Início Produto Item -->
+                <div class="flex gap-2">
+                    <!-- <img src="./assets/hamb-1.png" alt="hamburgues smash" class="w-28 h-28 rounded-md hover:scale-110 hover:-rotate-2 duration-300" /> -->
+                    <div>
+                        <p class="font-bold">Queijo c/ Chocolate</p>
+                        <p class="text-sm">Deliciosos cubos de queijo coalho, com sua textura firme e sabor suavemente
+                            salgado.</p>
 
                         <div class="flex items-center gap-2 justify-between mt-3">
                             <div>
@@ -206,87 +212,88 @@
                             </div>
                             <div>
                                 <span>Qtd</span>
-                                <button class="bg-gray-900 px-4 py-1 rounded remove-to-cart-btn" data-name="Esp. Queij. Choc."
-                                    data-price="10">
+                                <button class="bg-gray-900 px-4 py-1 rounded remove-to-cart-btn"
+                                    data-name="Esp. Queij. Choc." data-price="10">
                                     <i class="fa fa-circle-minus text-lg text-white"></i>
                                 </button>
                                 <span class="px-2">0</span>
-                                <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn" data-name="Esp. Queij. Choc."
-                                    data-price="10">
+                                <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn"
+                                    data-name="Esp. Queij. Choc." data-price="10">
                                     <i class="fa fa-circle-plus text-lg text-white"></i>
                                 </button>
                             </div>
                         </div>
+                    </div>
                 </div>
+                <!-- Final Produto Item -->
+
+            </main>
+
+            <div class="mx-auto max-w-7xl px-2 my-2">
+                <h2 class="font-bold text-3xl">
+                    Bebidas
+                </h2>
             </div>
-            <!-- Final Produto Item -->
+            <!-- Final Grid Espetinhos -->
+            <!-- Início Grid Bebidas -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16"
+                id="menu">
+                <!-- Início Bebida Item -->
+                <div class="flex gap-2 w-full">
+                    <img src="./assets/refri-1.png" alt="Coca-Cola 350ml"
+                        class="w-18 h-18 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+                    <div class="w-full">
+                        <p class="font-bold">Coca-Cola 350ml</p>
 
-        </main>
-
-        <div class="mx-auto max-w-7xl px-2 my-2">
-            <h2 class="font-bold text-3xl">
-                Bebidas
-            </h2>
-        </div>
-        <!-- Final Grid Espetinhos -->
-        <!-- Início Grid Bebidas -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 md:gap-10 mx-auto max-w-7xl px-2 mb-16"
-            id="menu">
-            <!-- Início Bebida Item -->
-            <div class="flex gap-2 w-full">
-                <img src="./assets/refri-1.png" alt="Coca-Cola 350ml"
-                    class="w-18 h-18 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
-                <div class="w-full">
-                    <p class="font-bold">Coca-Cola 350ml</p>
-
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$6,00</p>
-                        <div>
-                            <span>Qtd</span>
-                            <button class="bg-gray-900 px-4 py-1 rounded remove-to-cart-btn" data-name="Coca-Cola 350ml"
-                                data-price="6">
-                                <i class="fa fa-circle-minus text-lg text-white"></i>
-                            </button>
-                            <span class="px-2">0</span>
-                            <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn" data-name="Coca-Cola 350ml"
-                                data-price="6">
-                                <i class="fa fa-circle-plus text-lg text-white"></i>
-                            </button>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$6,00</p>
+                            <div>
+                                <span>Qtd</span>
+                                <button class="bg-gray-900 px-4 py-1 rounded remove-to-cart-btn"
+                                    data-name="Coca-Cola 350ml" data-price="6">
+                                    <i class="fa fa-circle-minus text-lg text-white"></i>
+                                </button>
+                                <span class="px-2">0</span>
+                                <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn"
+                                    data-name="Coca-Cola 350ml" data-price="6">
+                                    <i class="fa fa-circle-plus text-lg text-white"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- Final Bebida Item -->
-            <!-- Início Bebida Item -->
-            <div class="flex gap-2 w-full">
-                <img src="./assets/refri-2.png" alt="Guaraná 350ml"
-                    class="w-18 h-18 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
-                <div class="w-full">
-                    <p class="font-bold">Guaraná 350ml</p>
+                <!-- Final Bebida Item -->
+                <!-- Início Bebida Item -->
+                <div class="flex gap-2 w-full">
+                    <img src="./assets/refri-2.png" alt="Guaraná 350ml"
+                        class="w-18 h-18 rounded-md hover:scale-110 hover:-rotate-2 duration-300" />
+                    <div class="w-full">
+                        <p class="font-bold">Guaraná 350ml</p>
 
-                    <div class="flex items-center gap-2 justify-between mt-3">
-                        <p class="font-bold text-lg">R$6,00</p>
-                        <div>
-                            <span>Qtd</span>
-                            <button class="bg-gray-900 px-4 py-1 rounded remove-to-cart-btn" data-name="Guaraná 350ml"
-                                data-price="6">
-                                <i class="fa fa-circle-minus text-lg text-white"></i>
-                            </button>
-                            <span class="px-2">0</span>
-                            <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn" data-name="Guaraná 350ml"
-                                data-price="6">
-                                <i class="fa fa-circle-plus text-lg text-white"></i>
-                            </button>
+                        <div class="flex items-center gap-2 justify-between mt-3">
+                            <p class="font-bold text-lg">R$6,00</p>
+                            <div>
+                                <span>Qtd</span>
+                                <button class="bg-gray-900 px-4 py-1 rounded remove-to-cart-btn"
+                                    data-name="Guaraná 350ml" data-price="6">
+                                    <i class="fa fa-circle-minus text-lg text-white"></i>
+                                </button>
+                                <span class="px-2">0</span>
+                                <button class="bg-gray-900 px-4 py-1 rounded add-to-cart-btn" data-name="Guaraná 350ml"
+                                    data-price="6">
+                                    <i class="fa fa-circle-plus text-lg text-white"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- Final Bebida Item -->
             </div>
-            <!-- Final Bebida Item -->
-        </div>
-        <!-- Final Grid bebidas -->
+            <!-- Final Grid bebidas -->
 
+        </div>
+        <!-- Final Menu -->
     </div>
-    <!-- Final Menu -->
 
     <!-- Início Modal Cart -->
     <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
@@ -301,10 +308,10 @@
             <p class="font-bold mt-4">Nome para Retirada</p>
             <input type="text" placeholder="Digite nome para retirada" id="address"
                 class="w-full border-2 p-1 rounded my-1" />
-            <p class="text-red-500 hidden" id="address-warn">Digite seu endereço completo!</p>
+            <p class="text-red-500 hidden" id="address-warn">Digite seu nome para retirada!</p>
 
             <div class="flex items-center justify-between mt-5 w-full">
-                <button id="close-modal-btn">Fechar</button>
+                <button id="close-modal-btn" class="px-4 py-1 rounded border-1">Adicionar mais itens <i class="fa fa-bag-shopping text-red"></i> </button>
                 <button id="checkout-btn" class="bg-green-500 text-white px-4 py-1 rounded">Finalizar Pedido</button>
             </div>
 

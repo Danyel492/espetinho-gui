@@ -9,6 +9,10 @@ body {
     background-color: var(--claro);
 }
 
+#container{
+    padding: 10px;
+}
+
 body, button, input, textarea {
     font-family: "SUSE", sans-serif;
 }
